@@ -1,9 +1,74 @@
-<app-ui-top-navigation></app-ui-top-navigation>
+  <div class="navbar-fixed">
+  <nav role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">
+        <img class="responsive-img" src="./assets/img/logo.png" alt="aula8">
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Inicio</a></li>
+        <li><a [routerLink]="['/dashboard']">Ingreso</a></li>
+        <li><a [routerLink]="['/profile']">Conócenos</a></li>
+        <li><a [routerLink]="['/weather']">Ayuda</a></li>
 
-<app-ui-sub-navigation [title]="(observable$ | async)?.title" [description]="(observable$ | async)?.text"></app-ui-sub-navigation>
 
-<div class="main">
+        
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Inicio</a></li>
+        <li><a [routerLink]="['/dashboard']">Ingreso</a></li>
+        <li><a [routerLink]="['/profile']">Conócenos</a></li>
+        <li><a [routerLink]="['/weather']">Ayuda</a></li>
+
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+  </div>
+  <main>
   <router-outlet></router-outlet>
-</div>
+  </main>
+    <footer class="page-footer grey lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="blue-text">Acerca de aula8</h5>
+          <p class="black-text"> Es un proyecto desarrollado por estudiantes para estudiantes y profesores. Pensamos que crear cosas positivas y útiles para la comunidad es la mejor forma de aprender.</p>
 
-<router-outlet name='modal'></router-outlet>
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="blue-text">Tienes algun comentario?</h5>
+          <div class="row">
+            <form>
+            <div class="input-field col s12">
+                <input id="msj" type="text" class="validate">
+                <label pfor="msj">Mensaje</label>
+            </div>
+            </form>
+            &nbsp;&nbsp;
+            <button class="btn-small waves-effect waves-light" type="submit" name="action">Enviar
+            </button>
+            
+            </div>
+            </div>
+
+        <div class="col l3 s12">
+          <h5 class="blue-text">Entérate de todo</h5>
+          <ul>
+            <a href="https://www.instagram.com/aula8_/" target="_blank"><img src="./assets/img/instagram.png"></a>
+            &nbsp;
+            <a href="https://twitter.com/aula8_" target="_blank"><img src="./assets/img/twitter.png"></a>
+            &nbsp;
+            <a href="https://facebook.com/aula8/" target="_blank"><img src="./assets/img/facebook.png"></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey lighten-1">
+      <div class="container">
+      A project by <a class="blue-text" href="http://cupofcodeteam.com">cupofcodeteam.com</a>
+      </div>
+    </div>
+  </footer>

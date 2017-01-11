@@ -1,41 +1,120 @@
-<h2>Dashboard component</h2>
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <br>
+        <br>
+        <br>
+        <h1 class="header center blue-text text-ligh">Aula8</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">La plataforma que te permite aprender desde la comodidad de tu hogar</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light blue lighten-1">Comienza ahora</a>
+        </div>
+        <br><br>
 
-<h3>Feeds</h3>
-<app-ui-notes *ngIf="!(feeds$ | async)?.length" type="info" text="No feed, add one."></app-ui-notes>
-
-<div class="feed animation" *ngFor="let item of feeds$ | async">
-  <a>{{item.name}}</a>
-  <div class="text">
-    {{item.text}}
-  </div>
-  <div class="actions">
-    <a class="reply"><button class="ui button icon basic red" (click)="removeFeed(item.id)">Remove</button></a>
-  </div>
-  <div class="comments">
-
-    <div class="comment animation animation-comment" *ngFor="let comment of item?.comments">
-      <div class="text">
-        {{comment.text}}
       </div>
     </div>
-
-    <form class="form" #commentForm="ngForm" (submit)="submitCommentOnFeed(item.id, commentForm)" [ngClass]="{'error': commentForm.errors && (commentForm.dirty || commentForm.touched)}">
-      <div class="field">
-        <input placeholder="Enter comment..." type="text" name="text" required ngModel />
-      </div>
-      <button [disabled]="!commentForm.valid" class="ui blue labeled submit icon button">
-        <i class="icon edit"></i> Add comment
-      </button>
-    </form>
+    <div class="parallax" materialize="parallax"> <img src="./assets/img/background6.jpg" alt="Unsplashed background img 1"></div>
   </div>
-  <div class="clear"></div>
-</div>
 
-<br/>
 
-<form class="form" [formGroup]="form">
-  <app-ui-input label="Name" placeholder="Enter name...." [control]="form.get('name')"></app-ui-input>
-  <app-ui-input label="Text" placeholder="Enter text...." [control]="form.get('text')"></app-ui-input>
+  <div class="container">
+    <div class="section">
 
-  <app-ui-button [disabled]="!form.valid"  text="Add Feed" (click)="submitFeed()"></app-ui-button>
-</form>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class="material-icons">location_on</i></h2>
+            <h5 class="center">No importa a donde vayas</h5>
+
+            <p class="light">Hemos trabajado duro para que puedas acceder a tu contenido y vivir la experiencia en vivo, sobre la marcha. Sin importar donde te encuentres, solo necesitas un dispositivo electrónico con acceso a internet. </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Una experiencia centrada en ti</h5>
+
+            <p class="light">Utilizamos elementos gráficos y tecnología de punta para ofrecerte una mejor experiencia, logrando que te centres tus clases y no en el sistema.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class="material-icons">verified_user</i></h2>
+            <h5 class="center">Acceso seguro desde cualquier parte</h5>
+
+            <p class="light">Tantas contraseñas en tantos sitios lo hace más complicado para ti. 
+            Por eso hemos incorporado un sistema de punta que te permitirá acceder haciendo uso de
+            tus redes sociales</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Una aplicación creada por estudiantes, para estudiantes.</h5>       
+        </div>
+      </div>
+    </div>
+    <div class="parallax" materialize="parallax"><img src="./assets/img/background7.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>¿Por qué aula 8?</h4>
+          <p class="left-align light">El proyecto nace debido a los diversos problemas que afectan a la educación en Venezuela y latinoamérica, afectando la calidad de estudio de los futuros profesionales. Aula8 entonces busca ofrecer una alternativa sencilla a estudiantes y profesores para trasladar su contenido a un mejor entorno.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+<a class="waves-effect waves-light btn modal-trigger blue" (click)="openModal()">Conoce más</a>
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal bottom-sheet" materialize="modal"[materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+            <div class="modal-content">
+                <h4 class="black-text">Funciones pensadas en ti</h4>
+                <div class="row">
+                  <div class="col s12 m4">
+                    <br>
+                    <img src="./assets/img/msj.png">
+                    <h5 class="center black-text"> Envío de preguntas personalizado</h5>
+                    <p class="center black-text"> El sistema de preguntas le permitirá al profesor descartar o responder y al estudiante preguntar y ver el estado de su pregunta. </p>
+                  </div>
+                  <div class="col s12 m4">
+                    <br>
+                    <img src="./assets/img/pdf.png">
+                    <h5 class="center black-text"> Presentaciones interactivas</h5>
+                    <p class="center black-text"> Los usuarios podrán añadir a la pizarra sus presentaciones para mostrar contenido, así como también compartirlos y guardarlos para luego </p>
+                  </div>
+
+                  <div class="col s12 m4">
+                    <br>
+                    <img src="./assets/img/pencil.png">
+                    <h5 class="center black-text">Trazado personalizado</h5>
+                    <p class="center black-text"> Para expresar las ideas intuitivamente, hemos diseñado una pizarra de tamaño acorde, adaptable a la pantalla de tu dispositivo y con diferentes tamaños de trazos, texto y formas predeterminadas</p>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                 <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Close</a>
+
+                <a class="modal-action modal-close waves-effect waves-green btn-flat white-text">Cool!</a>
+            </div>
+          </div>

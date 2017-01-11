@@ -1,4 +1,93 @@
-.main {
-  width: 800px;
-  padding: 20px;
+
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
 }
+nav .brand-logo{
+  padding-top: 4px;
+}
+
+p {
+  line-height: 2rem;
+}
+
+
+nav{
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.button-collapse {
+  color: #008bdf;
+}
+
+.btn-small{
+  height:35px;
+  line-height: 35px;
+}
+
+.btn {
+    background-color: #0089ec;
+}
+.parallax-container {
+  min-height: 580px;
+  line-height: 2;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+    top: 40%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.modal .modal-footer {
+    background-color: hsl(208, 78%, 50%);
+}
+
+   .input-field label {
+     color: #64b5f6;
+   }
+
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #2196F3;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #2196F3;
+     box-shadow: 0 1px 0 0 #2196F3;
+   }

@@ -11,6 +11,7 @@ import { InputComponent } from './input/input.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { LoaderComponent } from './loader/loader.component';
+import { MaterializeDirective } from 'angular2-materialize';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoaderComponent } from './loader/loader.component';
     ButtonComponent,
     LoaderComponent,
     InputComponent,
+    MaterializeDirective,
     NotesComponent
   ],
   imports: [
@@ -39,7 +41,9 @@ import { LoaderComponent } from './loader/loader.component';
     ButtonComponent,
     InputComponent,
     SubNavigationComponent,
+    MaterializeDirective,
     NotesComponent
   ]
 })
 export class SharedModule {}
+
