@@ -12,13 +12,7 @@ import { WeatherService } from './weather/weather.service';
 
 
 
- console.log(AppComponent);
- console.log(routing);
- console.log(effects, store, instrumentation);
- console.log(SharedModule);
- console.log(HttpModule);
- console.log(BrowserModule);
- console.log(FormsModule);
+ console.log(instrumentation);
 
 
 
