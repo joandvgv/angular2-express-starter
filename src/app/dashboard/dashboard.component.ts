@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -7,12 +7,14 @@ import { Observable } from 'rxjs';
 import { FEED_ADD, FEED_REMOVE, FEED_ADD_COMMENT } from '../store/feed/feed.actions';
 import { IAppState } from '../store';
 
+declare var $: any;
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   form: FormGroup;
 
   feeds$: Observable<{}>;
@@ -73,4 +75,10 @@ export class DashboardComponent {
     });
 
   }
+
+   ngOnInit() {
+    $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
+       }
 }
