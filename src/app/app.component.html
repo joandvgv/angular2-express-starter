@@ -1,14 +1,14 @@
   <div class="nav-wrapper transparent">
   <nav role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">
+      <a id="logo-container" href="#" class="brand-logo white-text">
         <img class="responsive-img" src="./assets/img/logo.png" alt="aula8">
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Inicio</a></li>
-        <li><a [routerLink]="['/dashboard']">Ingreso</a></li>
-        <li><a [routerLink]="['/profile']">Conócenos</a></li>
-        <li><a [routerLink]="['/weather']">Ayuda</a></li>
+        <li><a class="white-text" href="#">Inicio</a></li>
+        <li><a class="white-text" [routerLink]="['/dashboard']">Servicios</a></li>
+        <li><a class="white-text" [routerLink]="['/profile']">Blog</a></li>
+        <li><a class="white-text" [routerLink]="['/weather']">Contacto</a></li>
 
 
         
@@ -16,9 +16,9 @@
 
       <ul id="nav-mobile" class="side-nav" materialize="sideNav">
         <li><a href="#">Inicio</a></li>
-        <li><a [routerLink]="['/dashboard']">Ingreso</a></li>
-        <li><a [routerLink]="['/profile']">Conócenos</a></li>
-        <li><a [routerLink]="['/weather']">Ayuda</a></li>
+        <li><a [routerLink]="['/dashboard']">Servicios</a></li>
+        <li><a [routerLink]="['/profile']">Blog</a></li>
+        <li><a [routerLink]="['/weather']">Contacto</a></li>
 
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i>
@@ -29,17 +29,18 @@
   <main>
   <router-outlet></router-outlet>
   </main>
-    <footer class="page-footer grey lighten-2">
+    <footer class="page-footer blue-grey darken-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="blue-text">Acerca de aula8</h5>
-          <p class="black-text"> Es un proyecto desarrollado por estudiantes para estudiantes y profesores. Pensamos que crear cosas positivas y útiles para la comunidad es la mejor forma de aprender.</p>
+          <h5 class="white-text">Total Autos</h5>
+          <p class="white-text"> Somos un centro especializado en pulitura
+          de la prestigiosa Marca 3M. Combinamos su sistema con productos importados de la mejor calidad para ofrecer un servicio garantizado</p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="blue-text">Tienes algun comentario?</h5>
+          <h5 class="white-text">Tienes algun comentario?</h5>
           <div class="row">
             <form>
             <div class="input-field col s12">
@@ -55,7 +56,7 @@
             </div>
 
         <div class="col l3 s12">
-          <h5 class="blue-text">Entérate de todo</h5>
+          <h5 class="white-text">Entérate de todo</h5>
           <ul>
             <a href="https://www.instagram.com/aula8_/" target="_blank"><img src="./assets/img/instagram.png"></a>
             &nbsp;
@@ -68,7 +69,7 @@
     </div>
     <div class="footer-copyright grey lighten-1">
       <div class="container">
-      A project by <a class="blue-text" href="http://cupofcodeteam.com">cupofcodeteam.com</a>
+      A project by <a class="white-text" href="http://cupofcodeteam.com">cupofcodeteam.com</a>
       </div>
     </div>
   </footer>

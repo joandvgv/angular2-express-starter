@@ -78,7 +78,9 @@ export class DashboardComponent implements OnInit {
 
    ngOnInit() {
     $(document).ready(function(){
-      $('.slider').slider({full_width: true});
+      $('.slider').slider({height: 500,
+                          indicators: false
+                          });
     });
        }
 }

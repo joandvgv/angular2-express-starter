@@ -12,7 +12,7 @@ nav .brand-logo {
   color: #444;
 }
 nav .brand-logo{
-  padding-top: 4px;
+  padding-top: 10px;
 }
 
 p {
@@ -21,11 +21,12 @@ p {
 
 
 nav{
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgb(13, 12, 14);
 }
 
+
 .button-collapse {
-  color: #008bdf;
+  color: #ffffff;
 }
 
 .btn-small{
