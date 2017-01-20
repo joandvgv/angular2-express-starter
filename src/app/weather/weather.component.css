@@ -1,7 +1,7 @@
 /* Responsive Full Background Image Using CSS
  * Tutorial URL: http://sixrevisions.com/css/responsive-background-image/
 */
-body {
+.bodyt {
   /* Location of the image */
   background-image: url(http://wallpapercave.com/wp/9slIOm9.jpg);
   
@@ -28,7 +28,7 @@ body {
 
 /* For mobile devices */
 @media only screen and (max-width: 767px) {
-  body {
+  .bodyt {
     /* The file size of this background image is 93% smaller
      * to improve page load speed on mobile internet connections */
     background-image: url(http://wallpapercave.com/wp/9slIOm9.jpg);
