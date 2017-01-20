@@ -25,14 +25,15 @@ export class WeatherComponent implements OnInit {
 
     $(document).ready(function()
 {
- 
-      $('form').live('submit', function(){
-      $.post($(this).attr('action'), $(this).serialize(), function(response){
-           alert("We'll be in touch soon");
-      },'application/x-form-urlencoded');
-      return false;
-   });
+  $("#form").submit(function(e) {
+  e.preventDefault();
 
+  const $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    alert("Thank you!");
+  });
+});
+});
 
     this.form = this.fb.group({
       'latitude': ['43.815623', Validators.required],
