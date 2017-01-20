@@ -2,7 +2,7 @@
 <div class="col s6 offset-s3">
 <div class="card-panel white valign">
   <div class="row">
-    <form class="col s12" netlify>
+    <form name="contact" class="col s12" netlify>
       <div class="row">
         <div class="input-field col s6">
           <input id="first_name" name="nombre" type="text" class="validate">
@@ -35,4 +35,22 @@
   </div>
   </div>
   </div>
+
+  <form name="contact" action="thank-you" netlify>
+  <p>
+    <label>Your Name:</label>
+    <input type="text" name="name">
+  </p>
+  <p>
+    <label>Your Email</label>
+    <input type="email" name="email">
+  </p>
+  <p>
+    <label>Message</label>
+    <textarea name="message"></textarea>
+  </p>
+  <p>
+    <button>Send</button>
+  </p>
+</form>
         
