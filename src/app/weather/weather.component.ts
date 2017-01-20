@@ -25,13 +25,14 @@ export class WeatherComponent implements OnInit {
 
     $(document).ready(function()
 {
-  $("#form").submit(function(e) {
+   $("#myform").submit(function(e) {
   e.preventDefault();
 
-  const $form = $(this);
+  var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     alert("Thank you!");
-  });
+    console.log("submitted");
+  },'x-form-urlencoded');
 });
 });
 
