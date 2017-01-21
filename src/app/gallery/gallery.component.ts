@@ -82,6 +82,9 @@ export class GalleryComponent implements OnInit {
       $('.slider').slider({height: 500,
                           indicators: false
                           });
+      $('.carousel').carousel();
+      $('.materialboxed').materialbox();
     });
+
        }
 }
