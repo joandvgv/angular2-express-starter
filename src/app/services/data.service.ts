@@ -22,7 +22,7 @@ export class DataService implements CanActivate{
 
   sendMail(contactMail: string, text: string, telf: string, contactName: string){
       return this.http.post(
-          'http://totalautos.herokuapp.com/api/mail',
+          'https://totalautos.herokuapp.com/api/mail',
            {contactEmail: contactMail,contactName: contactName, contactMsg: text,contactTelf: telf})
            .map((response: Response)=> {
                // this.router.navigate(['/home']);
