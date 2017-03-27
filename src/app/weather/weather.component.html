@@ -1,38 +1,44 @@
 <div class="bodyt">
     <div class="row">
         <div class="col s12 m8 l4 offset-l4 offset-m2">
-            <div class="card-panel white valign">
+            <h5 class="white-text center-align">Por favor, envíanos tu mensaje y te responderemos en breve</h5>
+            <div class="card-panel white">
                 <div class="row">
                     <form [formGroup]="contactForm" name="contact" class="col s12" (ngSubmit)="sendMail()">
                         <div class="row" formGroupName="name">
                             <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
                                 <input formControlName="first" id="first_name" type="text" class="validate">
                                 <label for="first_name">Nombre</label>
                             </div>
                             <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
                                 <input formControlName="last" id="last_name" type="text" class="validate">
                                 <label for="last_name">Apellido</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
+                                <i class="material-icons prefix">email</i>
                                 <input id="email" formControlName="email" type="email" class="validate">
                                 <label for="email">Correo</label>
                             </div>
                             <div class="input-field col s6">
+                                <i class="material-icons prefix">contact_phone</i>
                                 <input id="telf" formControlName="telf" type="text" class="validate">
                                 <label for="telf">Teléfono</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
+                                <i class="material-icons prefix">message</i>
                                 <textarea id="textarea1" formControlName="text" class="materialize-textarea"></textarea>
                                 <label for="textarea1">Mensaje</label>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col s12">
-                                <button class="btn waves-effect blue lighten-2" type="submit" [disabled]="!contactForm.valid">Enviar
+                            <div class="col s12  center-align">
+                                <button class="btn waves-effect blue-grey" type="submit" [disabled]="!contactForm.valid">Enviar
                 <i class="material-icons right">send</i>
                </button>
                             </div>
