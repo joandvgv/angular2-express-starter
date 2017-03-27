@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {DataService} from '../services/data.service';
 import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 
 import { IAppState } from '../store/index';
 import { WEATHER_GET, SELECT_CITY } from '../store/weather/weather.actions';
@@ -25,7 +26,7 @@ export class WeatherComponent {
   text = new FormControl('', Validators.required);
 
   constructor(public fb: FormBuilder, private http: Http,
-              private dataService: DataService) {
+              private dataService: DataService, private router: Router) {
     this.contactForm = fb.group({
       name: fb.group({
         first: this.first,
@@ -43,6 +44,7 @@ export class WeatherComponent {
                               this.contactForm.value.telf,this.contactForm.value.name.first)
                               .subscribe(
                                 data=>{
+                                  this.router.navigate(['/inicio']);
                                 },
                                 error =>{
                                 }); 
