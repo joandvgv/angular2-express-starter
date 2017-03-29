@@ -1,4 +1,9 @@
 <div class="nav-wrapper transparent">
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a [routerLink]="['/cita']">Realizar cita</a></li>
+        <li class="divider"></li>
+        <li><a [routerLink]="['/servicios']">Información</a></li>
+    </ul>
     <nav role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo white-text">
@@ -6,9 +11,10 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a class="white-text" href="#">Inicio</a></li>
-                <li><a class="white-text" [routerLink]="['/inicio']">Servicios</a></li>
+                <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">Servicios<i class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a class="white-text" [routerLink]="['/galeria']">Galeria</a></li>
                 <li><a class="white-text" [routerLink]="['/contacto']">Contacto</a></li>
+
 
 
 
