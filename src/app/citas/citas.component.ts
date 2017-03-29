@@ -94,6 +94,61 @@ export class CitasComponent implements OnInit {
           today: 'Hoy',
           clear: 'Borrar',
           close: 'Cerrar'
+      });
+       $('input.autocomplete').autocomplete({
+    data: {
+      "30.000": null,
+      "7.000": null,
+      "8.000": null,
+      "9.000": null,
+      "10.000": null,
+      "15.000": null,
+      "20.000": null,
+      "35.000": null,
+      "40.000": null,
+      "50.000": null,
+      "60.000": null,
+      "70.000": null,
+      "80.000": null,
+      "90.000": null,
+      "100.000": null,
+      "110.000": null,
+      "120.000": null,
+      "130.000": null,
+      "140.000": null,
+      "150.000": null,
+      "160.000": null,
+      "Rojo": null,
+      "Verde": null,
+      "Amarillo": null,
+      "Azul": null,
+      "Negro": null,
+      "Beige": null,
+      "Plata": null,
+      "Dorado": null,
+      "Vinotinto": null,
+      "Gris": null,
+      "Naranja": null,
+      "Rosado": null,
+      "Honda": null,
+      "Chery": null,
+      "Toyota": null,
+      "Chrysler": null,
+      "Jeep": null,
+      "Audi": null,
+      "Volskwagen": null,
+      "Renault": null,
+      "Hyundai": null,
+      "Chevrolet": null,
+      "Ford": null,
+      "Skoda": null,
+      "Seat": null
+    },
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+    onAutocomplete: function(val) {
+      // Callback function when value is autcompleted.
+    },
+    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
   });
   });
          

@@ -31,3 +31,10 @@
 .edge {
     padding: 0 10% !important;
 }
+
+h5,
+h6,
+h4,
+h3 {
+    color: #FFFFFF;
+}
