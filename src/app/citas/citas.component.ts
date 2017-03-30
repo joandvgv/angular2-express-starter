@@ -13,6 +13,9 @@ declare var $: any;
   selector: 'app-citas',
   templateUrl: './citas.component.html',
   styleUrls: ['./citas.component.css'],
+  // warning: few browsers support shadow DOM encapsulation at this time
+encapsulation: ViewEncapsulation.None
+
 })
 export class CitasComponent implements OnInit {
   form: FormGroup;
@@ -150,7 +153,8 @@ export class CitasComponent implements OnInit {
     },
     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
   });
-  });
+  
+});
          
 
        }

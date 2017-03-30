@@ -1,5 +1,13 @@
 /* Custom Stylesheet */
 
+.select-wrapper {
+    ul {
+        li>span {
+            color: red;
+        }
+    }
+}
+
 
 /**
  * Use this file to override Materialize files so you can update

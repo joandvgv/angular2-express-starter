@@ -1,3 +1,7 @@
+.select-wrapper ul li>span {
+    color: #607D8B;
+}
+
 .bodyt {
     /* Location of the image */
     background-image: url(http://wallpapercave.com/wp/9slIOm9.jpg);
@@ -37,4 +41,65 @@ h6,
 h4,
 h3 {
     color: #FFFFFF;
+}
+
+
+/* label color */
+
+.input-field label {
+    color: #212121;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+    color: #607D8B;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #607D8B;
+    box-shadow: 0 1px 0 0 #607D8B;
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #607D8B;
+    box-shadow: 0 1px 0 0 #607D8B;
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #dd2c00;
+    box-shadow: 0 1px 0 0 #dd2c00;
+}
+
+.picker__weekday-display {
+    background-color: #455a64;
+}
+
+.picker__date-display,
+.picker__day--selected,
+.picker__day--selected:hover,
+.picker--focused .picker__day--selected {
+    background-color: #607D8B;
+    color: #fff;
+}
+
+.picker__close,
+.picker__today,
+.picker__day.picker__day--today {
+    color: #607D8B;
+}
+
+[type="checkbox"]:checked+label:before {
+    border-right: 2px solid #607D8B;
+    border-bottom: 2px solid #607D8B;
 }
